@@ -1,0 +1,32 @@
+
+- Tem por objetivo distinguir entre sequências válidas e inválidas a partir da Gramática Livre de Contexto (regras e especificações).
+
+- ### Gramática Livre de Contexto
+	- ##### T (Símbolo Terminal)
+		-  símbolos básicos de formação;
+		- Ex.: O aluno, estudou, fácil, difícil.
+	- ##### N (Símbolos Não-Terminais)
+		-  São variáveis sintáticas - se modificam recursivamente, podem ser substituídos;
+		- Ex.: < sujeito >, < verbo >, < adjetivo >.
+	- ##### S (Símbolo Inicial)
+		- Um Símbolo Não-Terminal é distinguido como o símbolo inicial e o conjunto de cadeias que ele representa é a linguagem gerada pela gramática. Ex.: < frase >
+	- ##### P (Produções)
+		- Especificam as formas como os símbolos terminais e não-terminais podem ser combinados para formar cadeias.
+	- #### Derivação
+		- Sequência de substituições de nomes de estruturas à direita da s regras gramaticais.
+		- ![[Pasted image 20251015160202.png]]
+		- ![[Pasted image 20251015160646.png]]
+			- Primeiro devemos inserir um caso de teste, como 01010;
+			- S -> 0A (01S) -> 01(0A) -> 010(1S) -> 0101(0A) -> 01010 blz (e é vazio) Falso;
+			- Verdadeiro - S -> (0A) -> 0(0B) -> 00e (máx 2 0s);
+			- Falso - Pode ser 00 - sem 1s;
+			- Falso - Pode terminar em 1 (ex. : 0101e).
+
+- ### Árvore de Derivação
+	- Uma derivação proporciona um método para a construção de uma cadeia específica de símbolos terminais partindo de um símbolo Não-Terminal inicial.
+	- Uma árvore de derivação é uma representação gráfica de uma derivação que filtra a ordem na qual as produções são aplicadas para substituir símbolos Não-Terminais.
+	- Ex.:
+		- ![[Pasted image 20251015162202.png]]
+		- ![[Pasted image 20251015162216.png]]
+		- ![[Pasted image 20251015162407.png]]
+		- ![[Pasted image 20251015162423.png]]
